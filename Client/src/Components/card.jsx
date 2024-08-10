@@ -1,10 +1,23 @@
 
 import React from 'react';
 import "../index.scss";
-import { Card, CardHeader, CardBody, CardFooter,Image ,Stack,Heading,Text,Divider,ButtonGroup,Button, Box} from '@chakra-ui/react';
-function Cardi({data1}){
-
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+  Stack,
+  Heading,
+  Text,
+  Divider,
+  ButtonGroup,
+  Button,
+  Box,
+} from "@chakra-ui/react";
+function Cardi({ data1 }) {
   // const data = props.json();
+
 
 
 
@@ -39,3 +52,4 @@ function Cardi({data1}){
     </Box>);
 }
  export default Cardi;
+

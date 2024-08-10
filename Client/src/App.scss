@@ -25,6 +25,7 @@
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .crew {
@@ -178,7 +179,9 @@ nav {
     }
 
     .destination {
+        
         background-image: url('./Assets/destination/background-destination-mobile.jpg');
+        
     }
 
     .crew {
