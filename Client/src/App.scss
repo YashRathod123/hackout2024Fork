@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700&family=Barlow:wght@300;400;700&family=Bellefair&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+/* Desktop sizing */
+
+.home {
+    
+    background-image: url('./Assets/home/background-home-desktop.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        margin-top: 24px;
+    }
+
+    p {
+        margin-top: 24px;
+    }
+}
+
+.destination {
+    background-image: url('./Assets/destination/background-destination-desktop.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.crew {
+    background-image: url('./Assets/crew/background-crew-desktop.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.technology {
+    background-image: url('./Assets/technology/background-technology-desktop.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: 'Bellefair', serif;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 172px;
+    color: rgba(255,255,255, 1);
+}
+
+h2 {
+    font-family: 'Bellefair', serif;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 114px;
+    
+}
+
+h3 {
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+}
+
+h4 {
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    color:rgba(255,255,255, 1);
+}
+
+h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: 300;
+    line-height: 34px;
+    color: rgba(208,214,249, 1);
+}
+
+.sub-h1 {
+    font-family: 'Bellefair', serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.sub-h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2.35ch;
+    line-height: 17px;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    color: rgba(208,214,249, 1);
+}
+
+nav {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7ch;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+}
+
+@media screen and (max-width: 1024px) {
+    .technology {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        background-image: url('./Assets/home/background-home-tablet.jpg');
+    }
+
+    .destination {
+        background-image: url('./Assets/destination/background-destination-tablet.jpg');
+    }
+
+    .crew {
+        overflow-x: hidden;
+        justify-content: unset;
+        background-image: url('./Assets/crew/background-crew-tablet.jpg');
+    }
+
+    .technology{
+        background-image: url('./Assets/technology/background-technology-tablet.jpg');
+    }
+
+
+    h1 {
+        line-height: 150px;
+    }
+
+    h5 {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.78px;
+    }
+
+    p {
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    h1 {
+        font-size: 125px;
+        line-height: 125px;
+    }
+}
+
+
+
+@media screen and (max-width: 425px) {
+    .home {
+        background-image: url('./Assets/home/background-home-mobile.jpg');
+
+        h1 {
+            margin-top: 16px;
+        }
+
+        p {
+            margin-top: 16px;
+        }
+    }
+
+    .destination {
+        background-image: url('./Assets/destination/background-destination-mobile.jpg');
+    }
+
+    .crew {
+        background-image: url('./Assets/crew/background-crew-mobile.jpg');
+        background-position: unset;
+
+    }
+
+    .technology {
+        background-image: url('./Assets/technology/background-technology-mobile.jpg');
+    }
+
+    h1 {
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: unset;
+    }
+}
+
+

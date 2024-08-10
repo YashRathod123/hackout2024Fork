@@ -1,0 +1,249 @@
+{
+    "space_technology_careers": [
+      {
+        "career_id": "C001",
+        "career_name": "Aerospace Engineer",
+        "description": "Aerospace Engineers design, develop, and test aircraft, spacecraft, and missiles. They work on the structural design, guidance, navigation, and control systems, as well as the overall mission design.",
+        "required_education": "Bachelor's degree in Aerospace Engineering or related field",
+        "skills_needed": [
+          "Strong mathematical and analytical skills",
+          "Proficiency in CAD software",
+          "Knowledge of materials science",
+          "Understanding of propulsion systems"
+        ],
+        "potential_employers": [
+          "NASA",
+          "SpaceX",
+          "Boeing",
+          "Lockheed Martin"
+        ],
+        "average_salary_usd": 85000,
+        "career_growth_outlook": "Expected to grow by 6% over the next decade",
+        "recommended_colleges": [
+          {
+            "college_name": "Massachusetts Institute of Technology (MIT)",
+            "location": "Cambridge, MA, USA",
+            "estimated_fees_usd": 53000
+          },
+          {
+            "college_name": "California Institute of Technology (Caltech)",
+            "location": "Pasadena, CA, USA",
+            "estimated_fees_usd": 54000
+          },
+          {
+            "college_name": "Indian Institute of Technology (IIT Bombay)",
+            "location": "Mumbai, India",
+            "estimated_fees_usd": 3000
+          }
+        ],
+        "recommended_books": [
+          {
+            "title": "Fundamentals of Astrodynamics",
+            "author": "Roger R. Bate",
+            "isbn": "978-0486600611"
+          },
+          {
+            "title": "Introduction to Flight",
+            "author": "John D. Anderson",
+            "isbn": "978-0073380247"
+          }
+        ]
+      },
+      {
+        "career_id": "C002",
+        "career_name": "Satellite Engineer",
+        "description": "Satellite Engineers are responsible for designing, building, and maintaining satellites. They work on various satellite components including communication systems, power supply, and data processing units.",
+        "required_education": "Bachelor's or Master's degree in Electrical Engineering, Mechanical Engineering, or related field",
+        "skills_needed": [
+          "Experience with satellite communication systems",
+          "Knowledge of orbital mechanics",
+          "Proficiency in systems engineering",
+          "Ability to work in multidisciplinary teams"
+        ],
+        "potential_employers": [
+          "ISRO",
+          "NASA",
+          "Thales Alenia Space",
+          "Airbus Defence and Space"
+        ],
+        "average_salary_usd": 90000,
+        "career_growth_outlook": "Expected to grow by 8% over the next decade",
+        "recommended_colleges": [
+          {
+            "college_name": "Stanford University",
+            "location": "Stanford, CA, USA",
+            "estimated_fees_usd": 55000
+          },
+          {
+            "college_name": "Indian Institute of Space Science and Technology (IIST)",
+            "location": "Thiruvananthapuram, India",
+            "estimated_fees_usd": 2000
+          },
+          {
+            "college_name": "University of Surrey",
+            "location": "Guildford, England",
+            "estimated_fees_usd": 25000
+          }
+        ],
+        "recommended_books": [
+          {
+            "title": "Satellite Communications",
+            "author": "Dennis Roddy",
+            "isbn": "978-0071462983"
+          },
+          {
+            "title": "Orbital Mechanics for Engineering Students",
+            "author": "Howard D. Curtis",
+            "isbn": "978-0128173937"
+          }
+        ]
+      },
+      {
+        "career_id": "C003",
+        "career_name": "Space Scientist",
+        "description": "Space Scientists conduct research and analyze data related to celestial bodies, the atmosphere, and space phenomena. They work on missions to explore planets, stars, and other celestial objects.",
+        "required_education": "PhD in Physics, Astronomy, or Space Science",
+        "skills_needed": [
+          "Strong background in physics and mathematics",
+          "Experience in data analysis and simulation",
+          "Research skills",
+          "Ability to write and publish scientific papers"
+        ],
+        "potential_employers": [
+          "NASA",
+          "ESA",
+          "ISRO",
+          "Academic institutions"
+        ],
+        "average_salary_usd": 95000,
+        "career_growth_outlook": "Expected to grow by 7% over the next decade",
+        "recommended_colleges": [
+          {
+            "college_name": "Harvard University",
+            "location": "Cambridge, MA, USA",
+            "estimated_fees_usd": 52000
+          },
+          {
+            "college_name": "University of Cambridge",
+            "location": "Cambridge, England",
+            "estimated_fees_usd": 45000
+          },
+          {
+            "college_name": "Indian Institute of Science (IISc)",
+            "location": "Bangalore, India",
+            "estimated_fees_usd": 1000
+          }
+        ],
+        "recommended_books": [
+          {
+            "title": "Cosmos",
+            "author": "Carl Sagan",
+            "isbn": "978-0345539434"
+          },
+          {
+            "title": "Astrophysics for People in a Hurry",
+            "author": "Neil deGrasse Tyson",
+            "isbn": "978-0393609394"
+          }
+        ]
+      },
+      {
+        "career_id": "C004",
+        "career_name": "Mission Specialist",
+        "description": "Mission Specialists are responsible for specific aspects of space missions, such as scientific research, navigation, and communication. They work closely with engineers and scientists to ensure mission success.",
+        "required_education": "Bachelor's degree in a relevant field (Engineering, Science, etc.)",
+        "skills_needed": [
+          "Strong understanding of mission design",
+          "Experience with spacecraft operations",
+          "Teamwork and communication skills",
+          "Problem-solving abilities"
+        ],
+        "potential_employers": [
+          "NASA",
+          "SpaceX",
+          "Blue Origin",
+          "Lockheed Martin"
+        ],
+        "average_salary_usd": 100000,
+        "career_growth_outlook": "Expected to grow by 5% over the next decade",
+        "recommended_colleges": [
+          {
+            "college_name": "University of Michigan",
+            "location": "Ann Arbor, MI, USA",
+            "estimated_fees_usd": 50000
+          },
+          {
+            "college_name": "University of Texas at Austin",
+            "location": "Austin, TX, USA",
+            "estimated_fees_usd": 47000
+          },
+          {
+            "college_name": "IIT Kanpur",
+            "location": "Kanpur, India",
+            "estimated_fees_usd": 3000
+          }
+        ],
+        "recommended_books": [
+          {
+            "title": "Space Mission Analysis and Design",
+            "author": "Wiley J. Larson",
+            "isbn": "978-1881883104"
+          },
+          {
+            "title": "Human Spaceflight: Mission Analysis and Design",
+            "author": "Wendell Mendell",
+            "isbn": "978-0070420731"
+          }
+        ]
+      },
+      {
+        "career_id": "C005",
+        "career_name": "Astrobiologist",
+        "description": "Astrobiologists study the possibility of life beyond Earth. They examine extreme environments on Earth to understand how life might exist on other planets and moons.",
+        "required_education": "PhD in Biology, Biochemistry, or a related field",
+        "skills_needed": [
+          "Knowledge of biology and chemistry",
+          "Experience with microbiology and extremophiles",
+          "Research and analytical skills",
+          "Understanding of planetary environments"
+        ],
+        "potential_employers": [
+          "NASA",
+          "Academic institutions",
+          "Research organizations",
+          "Space agencies"
+        ],
+        "average_salary_usd": 80000,
+        "career_growth_outlook": "Expected to grow by 9% over the next decade",
+        "recommended_colleges": [
+          {
+            "college_name": "University of California, Berkeley",
+            "location": "Berkeley, CA, USA",
+            "estimated_fees_usd": 43000
+          },
+          {
+            "college_name": "University of Edinburgh",
+            "location": "Edinburgh, Scotland",
+            "estimated_fees_usd": 41000
+          },
+          {
+            "college_name": "Tata Institute of Fundamental Research (TIFR)",
+            "location": "Mumbai, India",
+            "estimated_fees_usd": 1500
+          }
+        ],
+        "recommended_books": [
+          {
+            "title": "The Living Cosmos: Our Search for Life in the Universe",
+            "author": "Chris Impey",
+            "isbn": "978-1107600929"
+          },
+          {
+            "title": "Astrobiology: A Brief Introduction",
+            "author": "Kevin W. Plaxco",
+            "isbn": "978-0801883665"
+          }
+        ]
+      }
+    ]
+  }
