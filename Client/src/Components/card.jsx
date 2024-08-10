@@ -1,3 +1,4 @@
+
 import React from 'react';
 import "../index.scss";
 import { Card, CardHeader, CardBody, CardFooter,Image ,Stack,Heading,Text,Divider,ButtonGroup,Button, Box} from '@chakra-ui/react';
@@ -11,6 +12,7 @@ function Cardi({data1}){
         <Card maxW='sm' className="card">
   <CardBody>
     <Image
+
       src={data1.url}
       alt='space'
       borderRadius='lg'
@@ -19,6 +21,7 @@ function Cardi({data1}){
       <Heading size='md'>{data1.coursename}</Heading>
       <Text>
         {data1.description}
+
       </Text>
     </Stack>
   </CardBody>
@@ -26,7 +29,9 @@ function Cardi({data1}){
   <CardFooter>
     <ButtonGroup spacing='2'>
       <Button variant='solid' colorScheme='blue'>
+
         More Details
+
       </Button>
     </ButtonGroup>
   </CardFooter>
