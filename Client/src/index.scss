@@ -37,8 +37,24 @@ html, body, #root, h1, h2, h3, h4, h5, p {
     margin: 20px !important;
     box-shadow: 1px 1px 10px 4px rgb(29, 29, 29) !important;
 }
-
-// .con{
-//     display: flex;
-
-// }
+.custom-bullets {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px;
+     /* Space for custom bullets */
+  }
+  
+  .custom-bullets li {
+    position: relative;
+    margin-bottom: 8px; /* Space between list items */
+  }
+  
+  .custom-bullets li::before {
+    content: '•';
+    color: rgb(91, 91, 227); 
+    font-size: 30px; /* Custom size for the bullet */
+    position: absolute;
+    left: -25px; /* Position the bullet */
+    top: 0;
+  }
+  
+  

@@ -40,7 +40,7 @@ export function Destination({ data }) {
     loadChat();
   }, []);
 
-  console.log(courseList)
+  // console.log(courseList)
   return (
     <div>
       <Grid className="exp" templateColumns="repeat(3, 1fr)" gap={3}>
