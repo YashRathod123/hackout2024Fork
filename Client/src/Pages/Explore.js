@@ -1,3 +1,4 @@
+
 import styles from "../Styles/Destination.module.scss";
 import React, { useEffect } from "react";
 import "../index.scss";
