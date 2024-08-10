@@ -3,7 +3,7 @@ const pool = require("../config/db");
 const loadCourses = async (req, res) => {
   try {
     const data = await pool.query(
-      `SELECT courseID,coursename ,description FROM COURSE`
+      `SELECT courseID,coursename ,description,url FROM COURSE`
     );
     // console.log(data);
     res.json(data.rows);
