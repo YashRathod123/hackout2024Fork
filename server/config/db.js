@@ -10,8 +10,9 @@ const pool = new Pool({
   // host: "localhost",
   // port: 5432
 
-  connectionString: process.env.DATABASE_URL,
   ssl: true,
+  // connectionString: process.env.DATABASE_URL,
+  connectionString: "postgresql://astroguide_user:lOcr2rBasdKMHh9QOATkuMaKLZpPdUjU@dpg-cqri4mg8fa8c73d4erd0-a.singapore-postgres.render.com/astroguide",
 });
 
 pool

@@ -1,14 +1,14 @@
 
 import React from 'react';
 import "../index.scss";
-import { Card, CardHeader, CardBody, CardFooter,Image ,Stack,Heading,Text,Divider,ButtonGroup,Button} from '@chakra-ui/react';
-
+import { Card, CardHeader, CardBody, CardFooter,Image ,Stack,Heading,Text,Divider,ButtonGroup,Button, Box} from '@chakra-ui/react';
 function Cardi({data1}){
 
   // const data = props.json();
 
 
-    return (<div>
+
+    return (<Box width="100%" height="100%">
         <Card maxW='sm' className="card">
   <CardBody>
     <Image
@@ -36,6 +36,6 @@ function Cardi({data1}){
     </ButtonGroup>
   </CardFooter>
 </Card>
-    </div>);
+    </Box>);
 }
  export default Cardi;
