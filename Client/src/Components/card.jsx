@@ -1,7 +1,20 @@
 
 import React from 'react';
 import "../index.scss";
-import { Card, CardHeader, CardBody, CardFooter,Image ,Stack,Heading,Text,Divider,ButtonGroup,Button, Box} from '@chakra-ui/react';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+  Stack,
+  Heading,
+  Text,
+  Divider,
+  ButtonGroup,
+  Button,
+  Box,
+} from "@chakra-ui/react";
 import {useNavigate} from 'react-router-dom';
 
 
@@ -42,3 +55,4 @@ function Cardi({data1}){
     </Box>);
 }
  export default Cardi;
+

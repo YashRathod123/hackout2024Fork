@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.scss';
@@ -9,6 +8,7 @@ import { Destination } from './Pages/Explore';
 import { Crew } from './Pages/Question';
 import { Technology } from './Pages/Technology';
 import Course from './Components/course';
+import { Footer } from './Components/footer.js';
 
 const data = require('./Assets/shared/data.json');
 
@@ -52,6 +52,7 @@ function App() {
             <Route path="/course" element={<Course />} />
           </Routes>
         </main>
+        <Footer />
       </div>
   );
 }
