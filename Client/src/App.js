@@ -3,6 +3,7 @@ import { useLocation, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import styles from './Styles/Main.module.scss'
 import { Header } from "./Components/Header.js";
+import { Footer } from './Components/footer.js';
 import { Home } from './Pages/Home.js';
 import { Destination } from './Pages/Explore.js';
 import { Crew } from './Pages/Question.js';
@@ -56,6 +57,8 @@ function App() {
             </Routes>
                 
             </main>
+
+            <Footer/>
                     
         </div>
   );
