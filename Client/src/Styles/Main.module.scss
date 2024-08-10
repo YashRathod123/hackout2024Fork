@@ -1,0 +1,116 @@
+.main {
+    display: flex;
+    margin-top: 148px;
+    margin-left: 164px;
+    margin-right: 164px;
+    margin-bottom: 132px;
+}
+
+.mainCrew {
+    margin-top: auto;
+    margin-left: 166px;
+    margin-right: 72px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        margin-right: 144px;
+        margin-left: 144px;
+    }
+
+    .mainCrew {
+        margin-left: 56px;
+        margin-right: 56px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .mainCrew {
+        
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .main {
+        margin-top: 90px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainTechnology {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        margin-top: 106px;
+        margin-left: unset;
+        margin-right: unset;
+        margin-bottom: 90px;
+    }
+
+    .mainDestination {
+        margin-left: unset;
+        margin-right: unset;
+        margin-bottom: 90px;
+    }
+
+
+
+    .mainCrew {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .main {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main {
+        margin-top: unset;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 56px;
+        align-items: unset;
+    }
+
+    .mainDestination {
+        margin-top: unset;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 56px;
+        align-items: unset;
+    }
+
+    .mainTechnology {
+        align-items: unset;
+        margin-top: unset;
+        margin-left: unset;
+        margin-right: unset;
+        margin-bottom: 56px;
+    }
+
+    .mainCrew {
+        align-items: unset;
+        margin-top: unset;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: unset;
+    }
+}
+
+
+
+
+
