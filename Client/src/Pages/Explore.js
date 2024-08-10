@@ -41,17 +41,19 @@ export function Destination({ data }) {
 
   console.log(courseList)
   return (
-    <div>
-      <Grid className="exp" templateColumns="repeat(3, 1fr)" gap={3}>
+    <div className="testing">
+      {/* <Grid className="exp" templateColumns="repeat(3, 1fr)" gap={3}> */}
         {courseList &&
             courseList.map((c,i) => (
-            
-              <GridItem id={i}> 
-                <Cardi data1 = {c} />
+            <div >
+              <GridItem className="testing2"id={i}> 
+                <Cardi  data1 = {c} />
               </GridItem>
+
+              </div>
             
           ))}
-      </Grid>
+      {/* </Grid> */}
     </div>
   );
 }
