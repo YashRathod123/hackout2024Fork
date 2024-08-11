@@ -1,6 +1,8 @@
-//sort this once we have the useLocation hook in place
-import { useLocation, Route, Routes } from 'react-router-dom';
+
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.scss';
+
 import styles from './Styles/Main.module.scss'
 import { Header } from "./Components/Header.js";
 import { Home } from './Pages/Home.js';
@@ -11,9 +13,11 @@ import { useEffect, useState } from 'react';
 import  { CourseState } from './context/courseProvider.js';
 
 
+
 const data = require('./Assets/shared/data.json');
 const ENDPOINT = "http://localhost:3001/api";
 function App() {
+
 
     const { setAllCourses} = CourseState();
     const location = useLocation();
@@ -83,6 +87,7 @@ function App() {
             </main>
                     
         </div>
+
   );
 }
 

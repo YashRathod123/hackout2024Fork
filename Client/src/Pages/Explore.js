@@ -20,11 +20,13 @@ export function Destination({ data }) {
   const [isActive, setIsActive] = useState(0);
   const [courseList, setCourseList] = useState([]);
 
+
   const {allCourses} = CourseState();
 
   useEffect(()=>{
     setCourseList(allCourses);
   },[allCourses]);
+
 
   // console.log(courseList)
   return (
