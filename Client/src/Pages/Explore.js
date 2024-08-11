@@ -9,6 +9,7 @@ import EuropaImage from "../Assets/destination/image-europa.webp";
 import TitanImage from "../Assets/destination/image-titan.webp";
 import { useState } from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
+import { CourseState } from "../context/courseProvider";
 
 
 const ENDPOINT = "http://localhost:3001/api";
@@ -19,28 +20,13 @@ export function Destination({ data }) {
   const [isActive, setIsActive] = useState(0);
   const [courseList, setCourseList] = useState([]);
 
-  useEffect(() => {
-    async function loadChat() {
-      const response = await fetch(`${ENDPOINT}/course`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+  const {allCourses} = CourseState();
 
-      const data = await response.json();
-      console.log(data);
-      if (response.ok) {
-        setCourseList(data);
-      } else {
-        console.log(data);
-      }
-    }
+  useEffect(()=>{
+    setCourseList(allCourses);
+  },[allCourses]);
 
-    loadChat();
-  }, []);
-
-  console.log(courseList)
+  // console.log(courseList)
   return (
     <div className="testing">
       {/* <Grid className="exp" templateColumns="repeat(3, 1fr)" gap={3}> */}

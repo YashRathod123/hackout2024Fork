@@ -36,7 +36,7 @@ const grabCourse = async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-};
+}; 
 
 const searchCourses = async (req, res) => {
   console.log("Reach serachCourses");
@@ -48,10 +48,58 @@ const searchCourses = async (req, res) => {
     );
     // console.log(user.rows);
     res.json(user.rows);
-  } 
-  catch (err) {
+  } catch (err) {
     res.json(err);
   }
 };
 
-module.exports = { loadCourses, grabCourse, searchCourses };
+const filterQuestions = async (req, res) => {
+  console.log("Reach filterQuestions");
+
+  var arrOfCid = req.body.cid;
+
+  console.log(arrOfCid);
+
+  if (!arrOfCid ||arrOfCid.length == 0) {  
+    try {
+      const courses = await pool.query(`select * from questions `);
+
+      res.json(courses.rows);
+    } catch (err) {
+      console.log(err);
+      res.json(err);
+    }
+  } else {
+    var s = "";
+
+    for (var i = 0; i < arrOfCid.length; i++) {
+      if (i == arrOfCid.length - 1) {
+        s += `courseid = '${arrOfCid[i]}'`;
+      } else {
+        s += `courseid =  '${arrOfCid[i]}' or `;
+      }
+    }
+    try {
+      const courses = await pool.query(`select * from questions where ${s}`);
+
+      res.json(courses.rows);
+    } catch (err) {
+      res.json(err);
+    }
+  }
+};
+
+const addQuestion = async (req,res)=>{
+
+    try{
+      // const addedQuestion = await pool.query(`insert into questions (qusid,qes,id,course,)`);
+
+      res.json(addedQuestion.rows[0]);
+    }
+    catch(err){
+      console.log(err);
+      res.json(err);
+    }
+}
+
+module.exports = { filterQuestions, loadCourses, grabCourse, searchCourses };

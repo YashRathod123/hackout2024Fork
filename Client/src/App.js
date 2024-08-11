@@ -8,11 +8,14 @@ import { Destination } from './Pages/Explore.js';
 import { Crew } from './Pages/Question.js';
 import { Technology } from './Pages/Technology.js';
 import { useEffect, useState } from 'react';
+import  { CourseState } from './context/courseProvider.js';
+
 
 const data = require('./Assets/shared/data.json');
-
+const ENDPOINT = "http://localhost:3001/api";
 function App() {
 
+    const { setAllCourses} = CourseState();
     const location = useLocation();
 
     const [mainClass, setMainClass] = useState('');
@@ -40,6 +43,28 @@ function App() {
             setMainStyle(styles.mainTechnology);
         }
     }, [location.pathname])
+
+    useEffect(() => {
+        async function loadChat() {
+          const response = await fetch(`${ENDPOINT}/course`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+    
+          const data = await response.json();
+          // console.log(data);
+          if (response.ok) {
+            setAllCourses(data);
+          } else {
+            console.log(data);
+          }
+        }
+    
+        loadChat();
+      }, []);
+
 
 
     return (
