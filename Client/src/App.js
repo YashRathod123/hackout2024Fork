@@ -2,59 +2,92 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.scss';
-import styles from './Styles/Main.module.scss';
-import { Header } from "./Components/Header";
-import { Home } from './Pages/Home';
-import { Destination } from './Pages/Explore';
-import { Crew } from './Pages/Question';
-import { Technology } from './Pages/Technology';
-import Course from './Components/course';
-import { Footer } from './Components/footer.js';
+
+import styles from './Styles/Main.module.scss'
+import { Header } from "./Components/Header.js";
+import { Home } from './Pages/Home.js';
+import { Destination } from './Pages/Explore.js';
+import { Crew } from './Pages/Question.js';
+import { Technology } from './Pages/Technology.js';
+import { useEffect, useState } from 'react';
+import  { CourseState } from './context/courseProvider.js';
+
+
 
 const data = require('./Assets/shared/data.json');
-
+const ENDPOINT = "http://localhost:3001/api";
 function App() {
-  const location = useLocation();
 
-  const [mainClass, setMainClass] = useState('');
-  const [mainStyle, setMainStyle] = useState(styles.main);
 
-  useEffect(() => {
-    if (location.pathname === '/') {
-      setMainClass('home');
-      setMainStyle(styles.main);
-    }
+    const { setAllCourses} = CourseState();
+    const location = useLocation();
 
-    if (location.pathname === '/destination') {
-      setMainClass('destination');
-      setMainStyle(styles.mainDestination);
-    }
+    const [mainClass, setMainClass] = useState('');
 
-    if (location.pathname === '/crew') {
-      setMainClass('crew');
-      setMainStyle(styles.mainCrew);
-    }
+    const [mainStyle, setMainStyle] = useState(styles.main);
 
-    if (location.pathname === '/technology') {
-      setMainClass('technology');
-      setMainStyle(styles.mainTechnology);
-    }
-  }, [location.pathname]);
+    useEffect(() => {
+        if (location.pathname === '/') {
+            setMainClass('home')
+            setMainStyle(styles.main);
+        }
+    
+        if (location.pathname === '/destination') {
+            setMainClass('destination')
+            setMainStyle(styles.mainDestination);
+        }
+    
+        if (location.pathname === '/crew') {
+            setMainClass('crew')
+            setMainStyle(styles.mainCrew);
+        }
+    
+        if (location.pathname === '/technology') {
+            setMainClass('technology')
+            setMainStyle(styles.mainTechnology);
+        }
+    }, [location.pathname])
 
-  return (
-      <div className={mainClass}>
-        <Header />
-        <main className={mainStyle}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="destination" element={<Destination data={data.destinations} />} />
-            <Route path="crew" element={<Crew data={data.crew} />} />
-            <Route path="technology" element={<Technology data={data.technology} />} />
-            <Route path="/course" element={<Course />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+    useEffect(() => {
+        async function loadChat() {
+          const response = await fetch(`${ENDPOINT}/course`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+    
+          const data = await response.json();
+          // console.log(data);
+          if (response.ok) {
+            setAllCourses(data);
+          } else {
+            console.log(data);
+          }
+        }
+    
+        loadChat();
+      }, []);
+
+
+
+    return (
+        <div className={mainClass}>
+            <Header />
+
+            <main className={mainStyle}>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="destination" element={<Destination data={data.destinations}  />} />
+                <Route path="crew" element={<Crew data={data.crew} />} />
+                <Route path="technology" element={<Technology data={data.technology} />} />
+
+            </Routes>
+                
+            </main>
+                    
+        </div>
+
   );
 }
 
