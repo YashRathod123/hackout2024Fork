@@ -11,8 +11,8 @@ html, body, #root, h1, h2, h3, h4, h5, p {
 // }
 
 #root > div {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     min-height: 100vh;
     width: 100%;
 }
@@ -32,14 +32,64 @@ html, body, #root, h1, h2, h3, h4, h5, p {
 }
 
 .card{
-    background-color: rgba(24, 22, 22, 0.742) !important;
-    border: solid white 1px !important;
+    // background-color: rgba(24, 22, 22, 0.742) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    backdrop-filter: blur(81.5485px);
+    // border: solid white 1px !important;
     margin: 20px !important;
    height: 100%;
     box-shadow: 1px 1px 10px 4px rgb(29, 29, 29) !important;
+    
+}
+.custom-bullets {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px;
+     /* Space for custom bullets */
+  }
+  
+  .custom-bullets li {
+    position: relative;
+    margin-bottom: 8px; /* Space between list items */
+  }
+  
+  .custom-bullets li::before {
+    content: '•';
+    color: rgb(91, 91, 227); 
+    font-size: 30px; /* Custom size for the bullet */
+    position: absolute;
+    left: -25px; /* Position the bullet */
+    top: 0;
+  }
+  
+.exp{
+    // display: flex;
+    justify-content: space-around ;
+    margin-right: 0;
+    // align-items: center !important;
+
 }
 
-// .con{
-//     display: flex;
+.uneven{
+    height: 100% !important;
+    width: 100% !important;
+}
 
-// }
+.testing{
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: row;
+    // justify-content:center;
+    gap: 20px;
+    //width: 100%;
+}
+
+.testing2{
+    height: 100%;
+    // width: 100%;
+    padding: 20px;
+}
+
+
+// .setimage{
+    
+// 

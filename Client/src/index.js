@@ -5,13 +5,16 @@ import { ChakraProvider } from "@chakra-ui/react";
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CourseProvider from './context/courseProvider';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
+  <CourseProvider>
   <ChakraProvider>
   <App />
 </ChakraProvider>
+</CourseProvider>
 </BrowserRouter>
  
 );
