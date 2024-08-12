@@ -1,5 +1,4 @@
-import "../index.scss";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Modal,
@@ -10,34 +9,39 @@ import {
   ModalHeader,
   ModalOverlay,
   useDisclosure,
+  Checkbox,
+  CheckboxGroup,
+  Stack,
 } from "@chakra-ui/react";
-import { CourseState } from "../context/courseProvider";
-import { Checkbox, CheckboxGroup, Stack } from "@chakra-ui/react";
 import ScrollableFeed from "react-scrollable-feed";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { CourseState } from "../context/courseProvider";
+import "../index.scss";
 
 const ENDPOINT = "http://localhost:3001/api";
 
 export function Crew({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { allCourses } = CourseState();
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const [selectedCourseIds, setSelectedCourseIds] = useState([]);
-  const [questions, setQuestions] = useState([]); // State to store filtered questions
-  const [isAddQuestionOpen, setIsAddQuestionOpen] = useState(false); // State for add question modal
+  const [questions, setQuestions] = useState([]);
+  const [isAddQuestionOpen, setIsAddQuestionOpen] = useState(false);
 
   function formatDate(timestamp) {
     const date = new Date(timestamp);
 
     const options = {
-      day: '2-digit',
-      month: 'long',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true, // 12-hour format
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
     };
 
-    return date.toLocaleString('en-GB', options); // 'en-GB' for British English formatting
+    return date.toLocaleString("en-GB", options);
   }
 
   const handleCheckboxChange = (courseId) => {
@@ -61,13 +65,13 @@ export function Crew({ data }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ cid: selectedCourseIds }), // Convert to JSON string
+        body: JSON.stringify({ cid: selectedCourseIds }),
       });
 
       const data = await response.json();
       if (response.ok) {
-        setQuestions(data); 
-        console.log(data); // Store the fetched questions in state
+        setQuestions(data);
+        console.log(data);
       } else {
         console.error("Error fetching questions:", data);
       }
@@ -76,10 +80,13 @@ export function Crew({ data }) {
     }
   }
 
-  // Removed initial load of questions to only load after filtering
   useEffect(() => {
     loadQuestions();
-  }, []); 
+  }, []);
+
+  const handleQuestionClick = (id) => {
+    navigate(`/question/${id}`); // Use navigate to handle routing
+  };
 
   return (
     <div>
@@ -89,7 +96,6 @@ export function Crew({ data }) {
         </Button>
         <Button
           onClick={() => setIsAddQuestionOpen(true)}
-          // colorScheme="bluw"
           className="add-question-button"
         >
           Add Question
@@ -148,7 +154,7 @@ export function Crew({ data }) {
       <ScrollableFeed className="scrollable-feed">
         {questions.length > 0 ? (
           questions.map((question) => (
-            <div className="question-card" key={question.qusid}>
+            <div className="question-card" key={question.qusid} onClick={() => handleQuestionClick(question.qusid)}>
               <div className="question-header">
                 <p className="question-title">{question.qes}</p>
                 <p className="question-date">{formatDate(question.created_at)}</p>
